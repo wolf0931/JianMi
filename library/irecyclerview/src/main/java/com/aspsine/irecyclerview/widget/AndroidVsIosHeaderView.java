@@ -10,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.aspsine.irecyclerview.R;
 import com.aspsine.irecyclerview.RefreshTrigger;
@@ -24,6 +25,8 @@ public class AndroidVsIosHeaderView extends FrameLayout implements RefreshTrigge
     private ImageView ivSuperMan;
 
     private ImageView ivVs;
+
+    private TextView textView;
 
     private int mHeight;
 
@@ -43,6 +46,7 @@ public class AndroidVsIosHeaderView extends FrameLayout implements RefreshTrigge
         ivBatMan = (ImageView) findViewById(R.id.ivBatMan);
         ivSuperMan = (ImageView) findViewById(R.id.ivSuperMan);
         ivVs = (ImageView) findViewById(R.id.imageView);
+        textView = (TextView)findViewById(R.id.tvLoad);
 
         PropertyValuesHolder translationX1 = PropertyValuesHolder.ofFloat("translationX",0.0f,100.0f,0.0f);
         PropertyValuesHolder rotate = PropertyValuesHolder.ofFloat("rotationY",0.0f,380.0f,0.0f);

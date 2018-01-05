@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left|center"
         android:layout_marginLeft="40dp"
+        android:visibility="gone"
         android:background="@drawable/android_logo"
         android:scaleType="centerInside" />
 
@@ -18,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right|center"
         android:layout_marginRight="40dp"
+        android:visibility="gone"
         android:background="@drawable/ios_logo" />
 
     <ImageView
@@ -25,5 +27,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:visibility="gone"
         android:background="@drawable/android_vs_ios" />
+
+    <TextView
+        android:id="@+id/tvLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载中..."
+        android:layout_gravity="center"
+        />
 </merge>
