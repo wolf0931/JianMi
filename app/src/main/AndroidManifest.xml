@@ -38,7 +38,7 @@
         <!-- 友盟统计 -->
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="57e8e398e0f55ae655000723" >
+            android:value="5a4ed3e0f29d98551500080f" >
         </meta-data>
     </application>
 
