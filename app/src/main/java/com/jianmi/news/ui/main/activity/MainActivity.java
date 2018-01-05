@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity {
     CommonTabLayout tabLayout;
 
 //    private String[] mTitles = {"首页", "美女","视频","关注"};
-    private String[] mTitles = {"首页", "美女","视频"};
+    private String[] mTitles = {"首页", "图片","视频"};
 //    private int[] mIconUnselectIds = {
 //            R.mipmap.ic_home_normal,R.mipmap.ic_girl_normal,R.mipmap.ic_video_normal,R.mipmap.ic_care_normal};
 //    private int[] mIconSelectIds = {
@@ -63,8 +63,8 @@ public class MainActivity extends BaseActivity {
     public static void startAction(Activity activity){
         Intent intent = new Intent(activity, MainActivity.class);
         activity.startActivity(intent);
-        activity.overridePendingTransition(R.anim.fade_in,
-                com.jianmi.common.R.anim.fade_out);
+//        activity.overridePendingTransition(R.anim.fade_in,
+//                com.jianmi.common.R.anim.fade_out);
     }
 
     @Override
