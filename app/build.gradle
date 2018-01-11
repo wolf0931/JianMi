@@ -18,19 +18,19 @@ android {
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false"
             //混淆
-            minifyEnabled true
+            minifyEnabled false
             //Zipalign优化
             zipAlignEnabled true
             // 移除无用的resource文件
             shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             //apk命名
             android.applicationVariants.all { variant ->
                 variant.outputs.each { output ->
                     def outputFile = output.outputFile
                     if (outputFile != null && outputFile.name.endsWith('.apk')) {
                         //这里修改apk文件名
-                        def fileName = "JianMi-${defaultConfig.versionCode}-${defaultConfig.versionName}-${releaseTime()}.apk"
+                        def fileName = "JianMi_${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
                         output.outputFile = new File(outputFile.parent, fileName)
                     }
                 }
@@ -52,6 +52,53 @@ android {
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
+    }
+
+    productFlavors {
+        //投放应用宝市场
+        Tencent {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Tencent"]
+        }
+        //投放百度市场
+        Baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Baidu"]
+        }
+        //投放豌豆荚市场
+        Wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Wandoujia"]
+        }
+        //投放PP助手市场
+        PP {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "PP"]
+        }
+        //投放vivo市场
+        Vivo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Vivo"]
+        }
+        //投放oppo市场
+        Oppo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Oppo"]
+        }
+        //投放小米市场
+        Xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Xiaomi"]
+        }
+        //投放魅族市场
+        Meizu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Meizu"]
+        }
+        //投放华为应用市场
+        Huawei {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Huawei"]
+        }
+        //投放联想市场
+        Lenovo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Lenovo"]
+        }
+        //投放安卓市场
+        HiMarket {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "HiMarket"]
+        }
     }
 }
 

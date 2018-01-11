@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">简米新闻</string>
+    <string name="app_name">简米</string>
 
     <!--menu-->
-    <string name="news">简米新闻</string>
+    <string name="news">简米</string>
     <string name="zhihu">知乎</string>
     <string name="photo">图片</string>
     <string name="video">视频</string>

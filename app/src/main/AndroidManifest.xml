@@ -40,6 +40,10 @@
             android:name="UMENG_APPKEY"
             android:value="5a4ed3e0f29d98551500080f" >
         </meta-data>
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" /> <!--渠道号，多渠道这里使用了占位符$-->
     </application>
 
 </manifest>

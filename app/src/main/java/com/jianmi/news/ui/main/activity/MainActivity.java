@@ -161,10 +161,10 @@ public class MainActivity extends BaseActivity {
         switch (position) {
             //首页
             case 0:
-                transaction.hide(photosMainFragment);
+                transaction.show(photosMainFragment);
                 transaction.hide(videoMainFragment);
                 //transaction.hide(careMainFragment);
-                transaction.show(newsMainFragment);
+                transaction.hide(newsMainFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             //美女
